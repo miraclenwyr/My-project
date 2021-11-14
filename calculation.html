@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    *{
+        font-family: "Poppins", sans-serif;
+        background-color: rgb(17, 33, 68);
+        color: white;
+        font-size: 20px;
+        
+    }
+    .calc{
+        text-align: center;
+        margin-top: 120px;
+        
+    }
+    h1{
+        letter-spacing: 0.5rem;
+        font-size: 40px;
+    }
+   
+    .sign:hover{
+        background-color: rgb(255, 166, 0);
+        cursor: pointer;
+        color: white;
+    }
+
+    .sign{
+        margin: 0 10px;
+        padding: 0 20px;
+        cursor: pointer;
+        border: 1px solid white;
+    }
+
+    .text:focus{
+        background-color: rgb(80, 53, 3);
+    }
+
+    @media only screen and (max-width: 768px){
+        *{
+            font-size: 18px;
+        }
+        .sign{
+            margin: 10px 10px;
+        }
+        #text{
+            margin-bottom: 50px;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="calc">
+        <h1>Calculate The Number ! </h1><br>
+        <label for="" style="font-size: 20px;">First Number : &nbsp; &nbsp; &nbsp;</label>
+        <input type="text" id="calc1" style="border: 1px solid white;" class="text"><br> <br>
+
+    
+        <label for="" style="font-size: 19px;">Second Number : &nbsp;</label>
+        <input type="text" id="calc2" style="border: 1px solid white;" class="text"><br><br><br>
+
+        <button class="sign plus">+</button>
+        <button class="sign minus">-</button>
+        <button class="sign multiply">x</button>
+        <button class="sign divide">÷</button>
+        <button class="sign clear">Clear</button>
+        <br><br>
+
+        <!-- <button id="btn">Click to calculate</button><br><br> -->
+        <p id="text">This text will be your number 	&#128516;</p>
+    </div>
+
+    <script>
+
+        document.querySelector('.plus').addEventListener('click',function(){
+            let calc1 = document.getElementById('calc1');
+            let calc2 = document.getElementById('calc2');
+
+            let result = Number(calc1.value) + Number(calc2.value);
+            console.log(result);
+
+            document.getElementById('text').innerText = `This is your number ${result} 😊` ; 
+        })
+
+        document.querySelector('.minus').addEventListener('click',function(){
+            let calc1 = document.getElementById('calc1');
+            let calc2 = document.getElementById('calc2');
+
+            let result = Number(calc1.value) - Number(calc2.value);
+            console.log(result);
+
+            document.getElementById('text').innerText = `This is your number ${result} 😊` ; 
+        })
+
+        document.querySelector('.multiply').addEventListener('click',function(){
+            let calc1 = document.getElementById('calc1');
+            let calc2 = document.getElementById('calc2');
+
+            let result = Number(calc1.value) * Number(calc2.value);
+            console.log(result);
+
+            document.getElementById('text').innerText = `This is your number ${result} 😊` ; 
+        })
+
+        document.querySelector('.divide').addEventListener('click',function(){
+            let calc1 = document.getElementById('calc1');
+            let calc2 = document.getElementById('calc2');
+
+            let result = Number(calc1.value) / Number(calc2.value);
+            console.log(result);
+
+            document.getElementById('text').innerText = `This is your number ${result} 😊` ; 
+        })
+
+        document.querySelector('.clear').addEventListener('click', function(){
+         
+            let p = location.reload();
+            console.log(p);
+        })
+    </script>
+
+</body>
+
+
+</html>
